@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #17233b;
+    background: radial-gradient(circle at top left, #ddd6fe, transparent 55%),
+                linear-gradient(135deg, #f8fafc, #e0f2fe);
+}
+
+main {
+    width: min(100%, 680px);
+    padding: clamp(28px, 6vw, 64px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #fff;
+    border-radius: 28px;
+    box-shadow: 0 24px 70px rgba(45, 55, 90, 0.12);
+}
+
+h1 {
+    margin: 0 0 32px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+button {
+    padding: 16px 28px;
+    border: 0;
+    border-radius: 14px;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: #6355dc;
+    box-shadow: 0 8px 20px rgba(99, 85, 220, 0.25);
+    cursor: pointer;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+button:hover {
+    background: #5142c5;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid #17233b;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
+}
